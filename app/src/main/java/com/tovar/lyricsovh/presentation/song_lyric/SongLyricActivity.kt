@@ -1,10 +1,10 @@
 package com.tovar.lyricsovh.presentation.song_lyric
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.tovar.lyricsovh.R
-import com.tovar.lyricsovh.presentation.core.BaseActivity
 
-class SongLyricActivity : BaseActivity() {
+class SongLyricActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_lyric)
