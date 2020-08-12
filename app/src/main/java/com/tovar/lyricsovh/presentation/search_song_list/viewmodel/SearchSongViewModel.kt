@@ -1,6 +1,5 @@
 package com.tovar.lyricsovh.presentation.search_song_list.viewmodel
 
-
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.tovar.lyricsovh.domain.search_song_list.SearchSongsInteractor
@@ -8,7 +7,9 @@ import com.tovar.lyricsovh.presentation.resource.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.withTestContext
 
-class SearchSongViewModel(private val searchSongsInteractor: SearchSongsInteractor): ViewModel() {
+class SearchSongViewModel(
+    private val searchSongsInteractor: SearchSongsInteractor
+) : ViewModel() {
 
     fun getSongsBy(text: String) = liveData(Dispatchers.IO) {
         if (text != "") {

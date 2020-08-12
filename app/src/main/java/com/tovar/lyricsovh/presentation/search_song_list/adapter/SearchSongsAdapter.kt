@@ -1,5 +1,6 @@
 package com.tovar.lyricsovh.presentation.search_song_list.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.tovar.lyricsovh.R
 import com.tovar.lyricsovh.data.data_source.network.search_song_list.model.Data
+import com.tovar.lyricsovh.presentation.song_lyric.SongLyricActivity
 
 class SearchSongsAdapter(
     private val list: List<Data>
@@ -28,6 +30,9 @@ class SearchSongsAdapter(
             Glide.with(context).load(song.album.cover).into(ivAlbumCover)
             tvSongInfo.text =
                 context.getString(R.string.artist_and_song_title, song.artist.name, song.title)
+            itemView.setOnClickListener {
+                SongLyricActivity.launch(context = context, artist = song.artist.name, song = song.title)
+            }
         }
     }
 
