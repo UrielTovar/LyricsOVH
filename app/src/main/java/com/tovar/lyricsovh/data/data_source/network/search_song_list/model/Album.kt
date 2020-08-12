@@ -8,6 +8,6 @@ data class Album(
     val cover_xl: String,
     val id: Int,
     val title: String,
-    val tracklist: String,
+    val trackList: String,
     val type: String
 )

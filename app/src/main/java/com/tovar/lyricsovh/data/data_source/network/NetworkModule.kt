@@ -12,7 +12,7 @@ import okhttp3.logging.HttpLoggingInterceptor.Level
 
 class NetworkModule {
 
-    private val TAG_NETWORK = "WS"
+    private val NETWORKTAG = "WS"
 
     fun provideRetrofit(baseURL: String): Retrofit {
         return Retrofit.Builder()
@@ -28,7 +28,7 @@ class NetworkModule {
             HttpLoggingInterceptor(object: Logger {
                 override fun log(message: String) {
                     if (BuildConfig.DEBUG) {
-                        Log.i(TAG_NETWORK,message)
+                        Log.i(NETWORKTAG,message)
                     }
                 }
             }

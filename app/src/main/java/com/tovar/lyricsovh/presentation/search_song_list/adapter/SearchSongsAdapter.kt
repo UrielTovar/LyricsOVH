@@ -1,6 +1,5 @@
 package com.tovar.lyricsovh.presentation.search_song_list.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +30,11 @@ class SearchSongsAdapter(
             tvSongInfo.text =
                 context.getString(R.string.artist_and_song_title, song.artist.name, song.title)
             itemView.setOnClickListener {
-                SongLyricActivity.launch(context = context, artist = song.artist.name, song = song.title)
+                SongLyricActivity.launch(
+                    context = context,
+                    artist = song.artist.name,
+                    song = song.title
+                )
             }
         }
     }

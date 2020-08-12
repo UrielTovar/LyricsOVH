@@ -5,7 +5,6 @@ import androidx.lifecycle.liveData
 import com.tovar.lyricsovh.domain.search_song_list.SearchSongsInteractor
 import com.tovar.lyricsovh.presentation.resource.Resource
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.test.withTestContext
 
 class SearchSongViewModel(
     private val searchSongsInteractor: SearchSongsInteractor

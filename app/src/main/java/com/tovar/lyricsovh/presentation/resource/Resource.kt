@@ -2,7 +2,6 @@ package com.tovar.lyricsovh.presentation.resource
 
 import com.tovar.lyricsovh.presentation.resource.Status.*
 
-
 data class Resource<out T>(
     val status: Status,
     val data: T?,
