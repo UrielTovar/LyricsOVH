@@ -21,15 +21,19 @@
             android:layout_marginTop="30dp"
             android:textColor="@color/colorAccent"
             android:textSize="19sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Queen - Bohemian Rhapsody " />
 
         <ScrollView
+            android:id="@+id/svLyricsContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="52dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,11 +45,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:paddingBottom="15dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="13sp"
                 tools:text="@tools:sample/lorem/random" />
 
         </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pbLyricsSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLyricsError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
